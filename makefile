@@ -1,8 +1,8 @@
 cc = c++
 CFLAGS = -Wall -lncurses -std=c++11 -I$(INCLUDES) -g
 
-IDIR = ./code/include/
-SRCDIR = ./code/src/
+IDIR = ./include/
+SRCDIR = ./src/
 
 INCLUDES = $(IDIR)
 
