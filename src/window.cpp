@@ -45,16 +45,16 @@ void Window::PrintInformation(Player player){
 }
 void Window::PrintBag(Player player){
   erase();
-  int i=0;
+  int i,l=0;
   if(player.HasSwoll()){
-    mvprintw(i,0,"Swoll - the weapon increase your attack");
-    i++;
+    mvprintw(l,0,"Swoll - the weapon increase your attack");
+    l++;
   }
   std::vector<char> item = player.GetItem();
-  for(;i<player.GetItemCount();i++){
+  for(i=0;i<player.GetItemCount();i++,l++){
     if(strchr("m",item[i]))
-    mvprintw(i,0,"Meat - a thing to eat to recover HP");
-    else mvprintw(i,0,"Unknown - Something unexpected");
+    mvprintw(l,0,"Meat - a thing to eat to recover HP");
+    else mvprintw(l,0,"Unknown - Something unexpected");
   }
   refresh();
 }
